@@ -1,32 +1,24 @@
 package com.smart.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.smart.dao.UserRepository;
-import com.smart.entities.User;
-
-
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
 
-	@Autowired
-	private UserRepository userRepository;
-	
-	@GetMapping("/test")
-	@ResponseBody
-	
-	public String test()
+	@RequestMapping("/home")
+	public String home(Model model)
 	{
-		User user = new User();
-		user.setName("Sanket Chaudhari");
-		user.setEmail("sanket@dev.io");
-		
-		userRepository.save(user);
-		return "Working";
+		model.addAttribute("title", "Home - Smart Contact Manager");
+		return "home";
 	}
+
+	@RequestMapping("/about")
+	public String about(Model model)
+	{
+		model.addAttribute("title", "About - Smart Contact Manager");
+		return "about";
+	}
+	
 }
