@@ -38,13 +38,12 @@ public class User {
 	@NotBlank(message = "Name field is required !!")
 	@Size(min=2, max=20, message= "min 2 and max 20 characters are allowed !!")
 	private String name;
-	@Column(unique = true)
-	//TODO: Check Invalid Email message error
-	@Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$", message = "Invalid Email !!")
+//	@Column(unique = true)
+//	@Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$", message = "Invalid Email !!")
 	private String email;
-	@NotNull
-	@Pattern(regexp="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", 
-	message = "Password should contain 8 - 20 characters, atleast one digit, one uppercase, one lowercase and one special character!!")
+//	@NotNull
+//	@Pattern(regexp="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", 
+//	message = "Password should contain 8 - 20 characters, atleast one digit, one uppercase, one lowercase and one special character!!")
 	private String password;
 	private String role;
 	private boolean enabled;
