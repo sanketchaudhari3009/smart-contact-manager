@@ -41,9 +41,9 @@ public class User {
 //	@Column(unique = true)
 //	@Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$", message = "Invalid Email !!")
 	private String email;
-//	@NotNull
-//	@Pattern(regexp="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", 
-//	message = "Password should contain 8 - 20 characters, atleast one digit, one uppercase, one lowercase and one special character!!")
+	//	@NotNull
+	//	@Pattern(regexp="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$", 
+	//	message = "Password should contain 8 - 20 characters, atleast one digit, one uppercase, one lowercase and one special character!!")
 	private String password;
 	private String role;
 	private boolean enabled;
