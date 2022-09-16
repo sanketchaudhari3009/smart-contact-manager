@@ -7,6 +7,7 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.security.Principal;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpSession;
 
@@ -87,6 +88,7 @@ public class UserController {
 		if(file.isEmpty())
 		{
 			System.out.println("File is empty");
+			contact.setImage("img/contact.png");
 		}
 		else
 		{
@@ -144,6 +146,19 @@ public class UserController {
 
 		
 		return "normal/show_contacts";
+	}
+	
+	//showing particular contact details
+	@RequestMapping("/{cId}/contact")
+	public String showContactDetail(@PathVariable("cId") Integer cId, Model model)
+	{
+		System.out.println("CID"+cId);
+		Optional<Contact> contactOptional = this.contactRepository.findById(cId);
+		Contact contact = contactOptional.get();
+		
+		model.addAttribute("contact", contact)
+		;
+		return "normal/contact_detail";
 	}
 	
 }
