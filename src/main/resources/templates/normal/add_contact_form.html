@@ -33,7 +33,7 @@
 									</div>
 								</div>
 								
-								<input type="text" id="firstName" name = "name" placeholder="Enter name here" class="form-control"/>
+								<input required type="text" id="firstName" name = "name" placeholder="Enter name here" class="form-control"/>
 								
 							</div>
 							
@@ -46,7 +46,7 @@
 									</div>
 								</div>
 								
-								<input type="text" id="secondName" name = "secondName" placeholder="Enter Nick name here" class="form-control"/>
+								<input required type="text" id="secondName" name = "secondName" placeholder="Enter Nick name here" class="form-control"/>
 								
 							</div>
 							
@@ -59,7 +59,7 @@
 									</div>
 								</div>
 								
-								<input type="number" id="phone" name = "phone" placeholder="Enter Phone Number here" class="form-control"/>
+								<input required min="10" type="number" id="phone" name = "phone" placeholder="Enter Phone Number here" class="form-control"/>
 								
 							</div>
 							
@@ -72,7 +72,7 @@
 									</div>
 								</div>
 								
-								<input type="email" id="email" name = "email" placeholder="Enter email here" class="form-control"/>
+								<input required type="email" id="email" name = "email" placeholder="Enter email here" class="form-control"/>
 								
 							</div>
 							
@@ -85,7 +85,7 @@
 									</div>
 								</div>
 								
-								<input type="text" id="work" name = "work" placeholder="Enter work here" class="form-control"/>
+								<input required type="text" id="work" name = "work" placeholder="Enter work here" class="form-control"/>
 								
 								
 								
@@ -95,7 +95,7 @@
 							
 							<div class="form-group mt-3">
 								
-								<textarea placeholder= "Enter contact description" name="description" id="description" class="form-control" rows="10"></textarea>
+								<textarea id="mytextarea" placeholder= "Enter contact description" name="description"  class="form-control" rows="20"></textarea>
 							
 							</div>
 							
@@ -124,7 +124,12 @@
 			</div>
 		
 		</div>
-		
+		<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+		<script>
+	      tinymce.init({
+	        selector: '#mytextarea'
+	      });
+	    </script>
 		
 	</section>
 </body>
