@@ -23,7 +23,7 @@ body{
 #login .container #login-row #login-column #login-box {
   margin-top: 120px;
   max-width: 600px;
-  height: 420px;
+  height: 390px;
   border: 1px solid #9C9C9C;
   background-color: white;
 }
@@ -99,4 +99,24 @@ body{
 	object-fit:cover;
 	border-radius: 50%;	
 	
+}
+
+/*search css*/
+.search-container{
+	position: relative;
+}
+
+.search-result{
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid gray;
+	display: none;
+}
+
+
+.active{
+	background: #009688 !important;
+	color: white !important;
 }
