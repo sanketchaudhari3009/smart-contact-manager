@@ -8,10 +8,11 @@ body{
 
 .banner{
 	width: 100%;
-	height: 93vh;
+	height: 93.3vh;
 	background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(../img/homepage.png);
 	background-size:cover;
 	color:white;
+	object-fit:contain;
 }
 
 .my-card{

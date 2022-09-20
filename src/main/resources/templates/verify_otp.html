@@ -18,9 +18,19 @@
 					  We have sent OTP to your email...
 					</div>
 					
+					<div th:if="${session.message}" class="container">
+		
+						<div class="alert  alert-danger my-2 text-center" role="alert">
+					  <span th:text="${session.message}"></span>
+					</div>
+						
+						<th:block th:text="${#session.removeAttribute('message')}"></th:block>
+						
+						
+					</div>
 					
 					
-					<form method="post" th:action="@{/send-otp}">
+					<form method="post" th:action="@{/verify-otp}">
 					
 					<div class="form-group">
 					
