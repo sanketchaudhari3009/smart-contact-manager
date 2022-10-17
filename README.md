@@ -9,7 +9,7 @@ Spring boot application for building contact profiles and saving contacts in eff
 
 
 # Tech Stack:
-- Spring Boot
+- Spring Boot V2.7
 - JPA
 - ThymeLeaf
 - MYSQL
