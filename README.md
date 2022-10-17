@@ -1,4 +1,4 @@
-# smart-contact-manager
+# Smart Contact Manager
 Spring boot application for building contact profiles and saving contacts in efficient manner.
 
 
